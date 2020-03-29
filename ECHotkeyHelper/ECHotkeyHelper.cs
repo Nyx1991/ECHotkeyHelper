@@ -62,6 +62,11 @@ namespace ECHotkeyHelper
 
         public static ECHotkey RegisterHotkey(Keys _keyAndModifiers, ECHotKeyHelperDelegate _callback)
         {
+            if (_keyAndModifiers == 0)
+            {
+                return null;
+            }
+
             int key = (int)_keyAndModifiers & (int)Keys.KeyCode;
             int modifiers = (int)_keyAndModifiers & (int)Keys.Modifiers;
 
