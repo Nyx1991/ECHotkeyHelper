@@ -72,7 +72,7 @@ namespace ECHotkeyHelper
                 throw new InvalidOperationException("Couldn’t register the hot key.");
 
             nextKeyId++;
-            return RegisterHotkey((Keys)key, (Keys)modifiers, _callback);
+            return hotkey;
         }
 
         public static void UnregisterHotkey(ECHotkey _hotkey)
